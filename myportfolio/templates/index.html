@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title> Portfolio - Personal Portfolio Website </title>
+    <meta name="keywords" content="HTML5 Template, Backend Portfolio">
+    <meta name="description" content="Portfolio - Personal Portfolio Website"
+    <meta name="author" content="austinobravo">
+
+    {% comment %} Favicon {% endcomment %}
+    <link rel="icon" type="image/png"  href="">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+<!-- Navbar  Section Start -->
+<header>
+    <a href="#" class="logo">Austine's <span> Portfolio</span>.</a>
+
+    <div class="bx bx-menu" id="menu-icon"></div>
+
+    <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <div class="bx bx-moon" id="darkmode"></div>
+    </ul>
+</header>
+<!-- Navbar Section End -->
+<!-- Home Section Start -->
+<section class="home" id="home">
+    <div class="social">
+        <a href="https://www.github.com/austinobravo" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="https://web.facebook.com/Austinobravo" target="_blank" rel="noopener noreferrer"><i class='bx bxl-facebook'></i></a>
+        <a href="https://twitter.com/austinobravo" target="_blank" rel="noopener noreferrer"><i class='bx bxl-twitter'></i></a>
+        <a href="https://www.linkedin.com/in/austine-ebogu-27818123b/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
+
+    </div>
+    <div class="home-img">
+        <img src="{% static 'image/main.png'%}" alt="">
+    </div>
+    <div class="home-text adjust">
+        <span>Hello, I'm</span>
+        <h1>Austine Ebogu</h1>
+        <h2>Backend Developer | Blockchain Developer</h2>
+        <p>Hey there, Firstly, I appreciate you visting my portfolio. <br>Well, I'm a Backend developer with a good knowledge of Frontend and also a Web3 Developer. <br> Download my CV to know more about me.</p>
+        <a href="#contact" class="btn">Download CV</a>
+    </div>
+</section>
+<!-- Home Section End -->
+<!-- About Section Start -->
+
+<section class="about" id="about">
+    <div class="heading">
+        <h2>About Me</h2>
+        <span>Introduction</span>
+    </div>
+
+    <div class="about-container">
+       {% for me in me %}
+       <div class="about-img">
+           <img src="{{me.image.url}}" alt="">
+        </div>
+        <div class="about-text">
+            <div>
+                 <p><b> BIO:</b> I'm the first son from a sibling of six and i hail from Ehime Mbano, Imo state in Nigeria. <br> I started my programming journey in 2017 in the final year of my first degree in Federal University of Technology, Owerri. <br> I started with the Wordpress CMS - Which i have a couple of projects .<br>Due to the limit of Wordpress, I make a decision to start writing my codes which i've enjoyed doing ever since.<br> I've worked  with a reputable Tech Company in Uyo, Akwa Ibom <a href="https://theroothub.com" target="_blank" rel="noopener noreferrer"> - TheRoothub</a>, and still working with them at of the moment i uploaded this portfolio.<br>I make use of the Django Framework (Python) for my Backend Projects.<br>Contact me to handle your Backend and Blockchain jobs. 
+                </p> 
+                {% comment %} <p>{{me.description}}</p> {% endcomment %}
+            </div>
+            <div class="information ">
+                <div class="info-box">
+                    <i class='bx bxs-user'></i>
+                    <span>{{me.name}}</span>
+                </div>
+                
+                <div class="info-box">
+                    <i class='bx bxs-phone'></i>
+                    <span><a href="tel:+2347065942606">+{{me.phone}}</a></span>
+                </div>
+                
+                <div class="info-box">
+                    <i class='bx bxs-envelope'></i>
+                    <span><a href="mailto:austinobravo@gmail.com">{{me.email}}</a></span>
+                </div>
+                <a href="#" class="btn">Download Cv</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %} 
+</section>
+<!-- About Section End -->
+
+<!-- Skills Section Start -->
+
+<section class="skills" id="skills">
+    <div class="heading">
+        <h2>Skills</h2>
+        <span>My Skills</span>
+    </div>
+
+    <div class="skills-container">
+        <div class="bars">
+
+            <div class="bars-box">
+                <h3>HTML</h3>
+                <span>70%</span>
+                <div class="light-bar"></div>
+                <div class="percent-bar html-bar"></div>
+            </div>
+
+            <div class="bars-box">
+                <h3>CSS</h3>
+                <span>60%</span>
+                <div class="light-bar"></div>
+                <div class="percent-bar css-bar"></div>
+            </div>
+
+            <div class="bars-box">
+                <h3>Python</h3>
+                <span>60%</span>
+                <div class="light-bar"></div>
+                <div class="percent-bar python-bar"></div>
+            </div>
+
+            <div class="bars-box">
+                <h3>Django</h3>
+                <span>65%</span>
+                <div class="light-bar"></div>
+                <div class="percent-bar django-bar"></div>
+            </div>
+        </div>
+        <div class="skills-img">
+            <img src="{% static 'image/main.png'%}" alt="Skill">
+        </div>
+    </div>
+</section>
+<!-- Skills Section End -->
+<!-- Services Section Start -->
+<section class="services container" id="services">
+    <div class="heading">
+        <h2>Projects</h2>
+        <span>My few projects</span>
+    </div>
+    <div class="services-content">
+        {% for project in project  %}
+        <div class="services-box">
+            <a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{project.image.url}}" class="services_image" alt=""></a>
+            <!-- <i class='bx bx-code-alt'></i> -->
+            <h3>{{project.title}}</h3>
+            <a href="{{project.link}}" target="_blank" rel="noopener noreferrer">Learn More</a>
+        </div>
+        {% endfor %}
+
+        {% comment %} <div class="services-box">
+            <i class='bx bx-server'></i>
+            <h3>Backend Development</h3>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="services-box">
+            <i class='bx bx-brush'></i>
+            <h3>UI/UX Design</h3>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="services-box">
+            <i class='bx bxl-android'></i>
+            <h3>App Development</h3>
+            <a href="#">Learn More</a>
+        </div> {% endcomment %}
+    </div>
+</section>
+<!-- Services Section End -->
+
+<!-- Contact Section Start -->
+<section class="contact" id="contact">
+    <div class="heading">
+        <h2>Contact</h2>
+        <span>Connect With Me</span>
+    </div>
+    <div class="contact-form">
+        {% for message in messages %}{{message}}{% endfor %}
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="name"></label>
+            {% comment %} <input type="text" name="name" placeholder="Your Name" required> {% endcomment %}
+            {{form.name}}
+            <label for="email"></label>
+            {% comment %} <input type="email" name="email" id="" placeholder="Your Email" required> {% endcomment %}
+            {{form.email}}
+            <label for="message"></label>
+            {% comment %} <textarea name="message" id="" cols="30" rows="10" placeholder="Write Message Here..." required></textarea> {% endcomment %}
+            {{form.message}}
+            <button type="submit" value="" class="btn contact-button">Send</button>
+        </form>
+    </div>
+</section>
+<!-- Contact Section End -->
+<div class="footer">
+    <h2>Follow Me:</h2>
+    <div class="footer-social">
+        <a href="https://web.facebook.com/Austinobravo" target="_blank" rel="noopener noreferrer"><i class='bx bxl-facebook'></i></a>
+        <a href="https://twitter.com/austinobravo" target="_blank" rel="noopener noreferrer"><i class='bx bxl-twitter'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-youtube'></i></a>
+    </div>
+
+</div>
+
+<div class="copyright">
+    &#169; <span id="current_year"></span> Austine's <span> Portfolio</span>. | All Right Reserved.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+    <!-- Javascript -->
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        document.getElementById("current_year").innerHTML = (new Date().getFullYear())
+    </script>
+</body>
+
+</html>
