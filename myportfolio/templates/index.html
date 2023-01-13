@@ -6,15 +6,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title> Portfolio - Personal Portfolio Website </title>
+    <title> Austine's Portfolio - Personal Portfolio </title>
     <meta name="keywords" content="HTML5 Template, Backend Portfolio">
     <meta name="description" content="Portfolio - Personal Portfolio Website"
     <meta name="author" content="austinobravo">
 
     {% comment %} Favicon {% endcomment %}
     <link rel="icon" type="image/png"  href="">
+    {% comment %} Css Section {% endcomment %}
     <link rel="stylesheet" href="{% static 'css/style.css'%}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">-->
 </head>
 
 <body>
@@ -52,7 +55,7 @@
         <h1>Austine Ebogu</h1>
         <h2>Backend Developer | Blockchain Developer</h2>
         <p>Hey there, Firstly, I appreciate you visting my portfolio. <br>Well, I'm a Backend developer with a good knowledge of Frontend and also a Web3 Developer. <br> Download my CV to know more about me.</p>
-        <a href="#contact" class="btn">Download CV</a>
+        <a href="{% static 'documents/Profile.pdf' %}" class="btn" target="_blank" rel="noopener noreferrer">Download CV</a>
     </div>
 </section>
 <!-- Home Section End -->
@@ -90,7 +93,7 @@
                     <i class='bx bxs-envelope'></i>
                     <span><a href="mailto:austinobravo@gmail.com">{{me.email}}</a></span>
                 </div>
-                <a href="#" class="btn">Download Cv</a>
+                <a href="{% static 'documents/Profile.pdf' %}" class="btn" target="_blank" rel="noopener noreferrer">Download CV</a>
             </div>
         </div>
     </div>
@@ -228,7 +231,7 @@
 
 
     <!-- Javascript -->
-    <script src="script.js"></script>
+    <script src="{% static 'js/script.js' %} "></script>
     <script type="text/javascript">
         document.getElementById("current_year").innerHTML = (new Date().getFullYear())
     </script>
